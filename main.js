@@ -4,7 +4,8 @@ const el={
     form : document.querySelector('form'),
     phoneInput: document.querySelector('#phone'), 
     nameInput: document.querySelector('#name'),
-    contactsContainer: document.querySelector('#contacts')
+    contactsContainer: document.querySelector('#contacts'),
+    categoryInput: document.querySelector('#category')
 }
 
 el.phoneInput.addEventListener('keydown',(ev) => {
@@ -21,10 +22,10 @@ el.form.addEventListener('submit',(ev) => {
     ev.preventDefault();
 
     const currentForm = ev.target;
-    const { name, phone } = currentForm.elements;
+    const { name, phone, category } = currentForm.elements;
 
-    if (name.value.trim() && phone.value.trim()) {
-        addContact(name.value, phone.value);
+    if (name.value.trim() && phone.value.trim() && category.value) {
+        addContact(name.value, phone.value, category.value);
     
         const htmlList = render(); 
         el.contactsContainer.innerHTML = htmlList;
