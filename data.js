@@ -29,3 +29,20 @@ export const render = () => {
 }
 
 
+export const updateCategoryById = (id, newCategory) =>{
+
+    const index = contacts.findIndex(contact => contact.id === id);
+
+    if (index !== -1)
+    {
+        contacts[index].category = newCategory;
+
+        localStorage.setItem('myContacts', JSON.stringify(contacts));
+
+        console.log("המערך המעודכן:", contacts);
+        return true;
+    }
+    return false;
+}
+
+window.updateCategoryById = updateCategoryById;
