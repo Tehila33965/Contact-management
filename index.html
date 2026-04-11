@@ -6,8 +6,10 @@
     <title>אנשי קשר</title>
     <!-- <script type="module" src="script.js"></script> -->
     <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="direction: rtl;">
+    <h1>אנשי קשר</h1>
     <form>
         <input type="text" id="name" name="name" placeholder="Enter your name...">
         <input type="tel" name="phone" id="phone">
@@ -19,5 +21,10 @@
         <button type="submit">הוסף</button>
     </form>
     <div id="contacts"></div>
+    <div class="actions">
+        <button onclick="print()">הדפסה</button>
+        <button id="delete">מחיקת אנשי הקשר</button>
+        <button onclick="window.close()">סגירת האתר</button>
+    </div>
 </body>
 </html>

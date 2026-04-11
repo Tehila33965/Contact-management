@@ -1,4 +1,4 @@
-import { addContact, render } from "./data.js";
+import { addContact, render, updateCategoryById } from "./data.js";
 
 const el={
     form : document.querySelector('form'),
@@ -44,3 +44,13 @@ el.form.addEventListener('submit',(ev) => {
 })
 
 el.contactsContainer.innerHTML = render();
+
+const btnDeleteAll = document.querySelector('#delete');
+
+btnDeleteAll.addEventListener('click', () => {
+    if (confirm("האם את בטוחה שברצונך למחוק את כל אנשי הקשר?"))
+    {
+        localStorage.removeItem('myContacts');
+        location.reload();
+    }
+})
