@@ -42,3 +42,5 @@ el.form.addEventListener('submit',(ev) => {
     
     currentForm.reset();
 })
+
+el.contactsContainer.innerHTML = render();
