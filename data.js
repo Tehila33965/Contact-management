@@ -22,9 +22,13 @@ export const render = () => {
     }
 
     return contacts.map(contact => {
-        return `<div>${contact.category} שם: ${contact.name}, טלפון: ${contact.phone}</div>`;
+        return `
+        <div class="contact-card">
+            <a href="contact-details.html?id=${contact.id}">
+                ${contact.category} שם: ${contact.name}, טלפון: ${contact.phone}
+            </a>
+        </div>`;
     }).join(''); 
-
 
 }
 
