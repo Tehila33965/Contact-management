@@ -1,0 +1,80 @@
+/* עיצוב כללי לגוף הדף */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* נשאר כפי שהיה, מתאים לכל צבע */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    color: #8E44AD; /* סגול כהה לعنوان */
+    margin-bottom: 20px;
+}
+
+/* עיצוב הטופס */
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(142, 68, 173, 0.2); /* צל בגוון סגול עדין */
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* מרווח בין האלמנטים */
+}
+
+/* עיצוב שדות הקלט והבחירה */
+input, select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #E056FD; /* ורוד בפוקוס */
+}
+
+/* עיצוב כפתור ההוספה */
+button {
+    background: linear-gradient(135deg, #8E44AD, #E056FD); /* אפקט גרדיאנט מסגול לורוד */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #7D3C98, #D843D8); /* גוון מעט כהה יותר במעבר עכבר */
+}
+
+/* עיצוב רשימת אנשי הקשר (ה-div למטה) */
+#contacts {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* עיצוב כרטיס איש קשר (לשימוש כשתזריקי תוכן ב-JS) */
+.contact-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-right: 5px solid #8E44AD; /* פס דקורטיבי בצד סגול */
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#phone{
+    direction: rtl;
+}
